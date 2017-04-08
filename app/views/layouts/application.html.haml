@@ -7,4 +7,20 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body{class: controller.controller_name}
-    = yield
+    %div#banner
+      = image_tag 'logo.svg', alt: 'The pragmatic Bookshelf'
+      %span.title
+        = @page_title
+    %div#columns
+      %div#side
+        %ul
+          %li
+            %a{href: ""} Home
+          %li
+            %a{href: ""} Questions
+          %li
+            %a{href: ""} News
+          %li
+            %a{href: ""} Contact
+      %div#main
+        = yield
