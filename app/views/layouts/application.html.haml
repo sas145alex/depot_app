@@ -13,9 +13,12 @@
         = @page_title
     %div#columns
       %div#side
+
+        %div#cart
+          = render @cart if @cart
+
         %ul
           %li
-            -# %a{href: } Home
             = link_to "Home", store_index_path
           %li
             %a{href: ""} Questions
