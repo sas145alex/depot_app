@@ -11,6 +11,8 @@
         = item.product.title
       %td.item_price
         = number_to_currency(item.total_price)
+      %td
+        = button_to "delete line", item, method: :delete
 
   %tr.total_line
     %td{colspan: "2"} Total
