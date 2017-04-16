@@ -14,8 +14,9 @@
     %div#columns
       %div#side
 
-        %div#cart
-          = render @cart if @cart
+        - if @cart
+          = hidden_div_if(@cart.line_items.empty?, id: 'cart') do
+            = render @cart
 
         %ul
           %li
