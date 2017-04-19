@@ -8,6 +8,9 @@
     %td.item_price
       = number_to_currency(line_item.total_price)
     %td
+      = button_to "dec", decrement_quantity_line_item_path(line_item),
+      remote: true, method: :post
+    %td
       = button_to "delete line", line_item, method: :delete
 - else
   %tr
@@ -18,5 +21,8 @@
       = line_item.product.title
     %td.item_price
       = number_to_currency(line_item.total_price)
+    %td
+      = button_to "dec", decrement_quantity_line_item_path(line_item),
+      remote: true, method: :post
     %td
       = button_to "delete line", line_item, method: :delete

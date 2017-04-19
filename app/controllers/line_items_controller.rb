@@ -10,6 +10,20 @@ class LineItemsController < ApplicationController
     @line_items = LineItem.all
   end
 
+  def decrement_quantity
+    @line_item = LineItem.find(params[:id])
+    if (@line_item.quantity -= 1) <= 0
+      @line_item.destroy
+    else
+      @line_item.save
+    end
+    @cart = @line_item.cart
+    # @cart.destroy if @cart.line_items.empty?
+    respond_to do |format|
+      format.js
+    end
+  end
+
   # GET /line_items/1
   # GET /line_items/1.json
   def show
