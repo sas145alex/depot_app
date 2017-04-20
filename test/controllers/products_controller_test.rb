@@ -6,7 +6,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     @update = {
       title: 'title1',
       description: 'discription1',
-      image_url: 'image1.jpg',
+      image_url: 'test_image.jpg',
       price: 19.95
     }
   end
@@ -46,7 +46,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
 
   test "can't delete product in cart" do
     assert_difference('Product.count', 0) do
-      delete product_url(products(:two))
+      delete product_url(products(:ruby))
     end
 
     assert_redirected_to products_url

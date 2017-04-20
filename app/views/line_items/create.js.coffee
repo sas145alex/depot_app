@@ -1,3 +1,5 @@
+$('#notice').hide();
+
 cart = $('#cart')
 
 if cart.is(':hidden')
