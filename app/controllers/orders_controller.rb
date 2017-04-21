@@ -20,6 +20,7 @@ class OrdersController < ApplicationController
   # GET /orders/new
   def new
     @order = Order.new
+    @checkout_now = true
   end
 
   # GET /orders/1/edit
