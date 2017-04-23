@@ -1,0 +1,16 @@
+%p
+  ="Dear #{@order.name}"
+
+%div
+  Thank you for your recent order from The Pragmatic Store.
+
+  You ordered the following items:
+
+  -# =puts 'AAAAAAAA'
+  -# =raise @order.line_items.inspect
+  -# =puts 'AAAAAAAA'
+  %div.items
+    = render @order.line_items
+
+  %div
+  We'll send you a separate e-mail when your order ships.

@@ -52,5 +52,19 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
+  #!!!!!!!
   config.action_cable.disable_request_forgery_protection = true
+  # config.action_mailer.default_url_options = {host: 'localhost'}
+  # DepotApp::Application.configure do
+  #   config.action_mailer.delivery_method = :smtp
+  #   config.action_mailer.smtp_settings = {
+  #     address: "smtp.gmail.com",
+  #     port: 587,
+  #     domain: "domain.of.sender.net",
+  #     authentication: "plain",
+  #     user_name: "dave",
+  #     password: "secret",
+  #     enable_starttls_auto: true
+  #   }
+  # end
 end
