@@ -1,0 +1,6 @@
+%div.depot_form
+  - if flash[:alert]
+    %p#notice
+      = flash[:alert]
+= form_tag() do
+  = render 'form'
