@@ -4,6 +4,10 @@ class User < ApplicationRecord
 
   after_destroy :ensure_an_admin_remains
 
+  def check_old_password(old_password)
+    self.password == old_password
+  end
+
   class Error < StandardError
   end
 

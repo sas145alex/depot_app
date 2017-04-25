@@ -29,6 +29,8 @@
             %a{href: ""} Contact
           %li
             = load_time
+          %li
+          = link_to "LOGIN", login_path
 
       - if session[:user_id]
         %ul
