@@ -1,0 +1,74 @@
+ru:
+  layouts:
+    application:
+      title: Библиотека Прагматика
+      home: "Стартовая"
+      questions: "Вопросы"
+      news: "Новости"
+      contact: "Контакты"
+
+  date:
+    formats:
+      default: "%d/%m/%Y"
+
+  time:
+    formats:
+      default: "%d/%m/%Y %H:%M:%S"
+
+  store:
+    index:
+      title_html: "Каталог Прагрматика"
+      add_to_cart_html: "Добавить в корзину"
+
+  carts:
+    cart:
+      title: "Ваша корзина"
+      checkout: "Заказать"
+      empty: "Очистить"
+
+  number:
+    currency:
+      format:
+        unit: "RUB"
+        precision: 2
+        separator: "."
+        delimiter: ","
+        format: "%u%n"
+
+  orders:
+    payment_types:
+      check: "Чек"
+      credit_card: "Кредитная карта"
+      purchase_order: "Заказ на покупку"
+    new:
+      legend: "Пожалуйста заполните данные"
+    form:
+      name: "Имя"
+      adress: "Адрес"
+      email: "E-mail"
+      pay_type: "Способ оплаты"
+      pay_prompt_html: "Выберете способ оплаты"
+      submit: 'Подтвердить заказ'
+
+  activerecord:
+    models:
+      order: "заказ"
+    attributes:
+      order:
+        adress: "Адрес"
+        name: "Имя"
+        email: "E-mail"
+        pay_type: "Тип оплаты"
+    errors:
+      messages:
+        inclusion: "Должно быть в множестве"
+        blank: "Должно быть не пусто"
+
+  errors:
+    template:
+      body: "Проблемки"
+      header:
+        one: "1 ошибка в %{model}"
+        other: "%{count} ошибок в %{model}"
+
+  thanks: 'Спасибо за заказ'
